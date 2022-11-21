@@ -26,12 +26,9 @@ function calculo() {
     if (res === ".") {
       document.getElementById("visorCauculadora").innerHTML = res.toFixed(1);
       limiteVisor(res);
-      return res;
-    } else if (res.length > 14) {
-      document.getElementById("visorCauculadora").innerHTML = "erro";
     } else {
       document.getElementById("visorCauculadora").innerHTML = res;
-      return res;
+      limiteVisor(res);
     }
   }
 }
@@ -43,6 +40,26 @@ function limiteVisor(quantidadeCaracters) {
   }
 }
 
+document.addEventListener("keyup", function (e) {
+  if (e.key == 1) insert(1);
+  else if (e.key == 2) insert(2);
+  else if (e.key == 3) insert(3);
+  else if (e.key == 4) insert(4);
+  else if (e.key == 5) insert(5);
+  else if (e.key == 6) insert(6);
+  else if (e.key == 7) insert(7);
+  else if (e.key == 8) insert(8);
+  else if (e.key == 9) insert(9);
+  else if (e.key == 0) insert(0);
+  else if (e.key == ".") insert(".");
+  else if (e.key == "c") clean();
+  else if (e.key == "Backspace") back();
+  else if (e.key == "=") calculo();
+  else if (e.key == "+") insert("+");
+  else if (e.key == "-") insert("-");
+  else if (e.key == "/") insert("/");
+  else if (e.key == "*") insert("*");
+});
 /*);
 document.getElementById("btn3").addEventListener("click", insert(3));
 document.getElementById("btn4").addEventListener("click", insert(4));
