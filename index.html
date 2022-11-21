@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tentando cauculadora</title>
+     <link rel="stylesheet" href="./assets/estilo.css">
+</head>
+<body>
+    <header class="estiloDominante">
+     <div id="titulo">
+        <H1>calculadora-javascript</H1>
+     </div>
+    </header>
+    <main>
+       <div id="principalCauculadora">
+         <div id="boxvisor">
+           <p id="visorCauculadora"></p>
+         </div>
+          <div class= "Botoes">
+           <div class="conteinnerbotoes">  
+            <button id="btn1" class="btns"onclick="insert('1')"> 1</button>
+            <button id="btn2" class="btns"onclick="insert('2')">2</button>
+            <button id="btn3" class="btns"onclick="insert('3')">3</button>
+            <button id="btnb" class="btns"onclick="back()"><</button>
+          </div> 
+          <div class="conteinnerbotoes">
+            <button id="btn4" class="btns"onclick="insert('4')">4</button>
+            <button id="btn5" class="btns"onclick="insert('5')">5</button>
+            <button id="btn6" class="btns"onclick="insert('6')">6</button>
+            <button id="btnc" class="btns"onclick="clean()">C</button>
+          </div>
+          <div class="conteinnerbotoes">
+            <button id="btn7" class="btns"onclick="insert('7')">7</button>
+            <button id="btn8" class="btns"onclick="insert('8')">8</button>
+            <button id="btn9" class="btns"onclick="insert('9')">9</button>
+            <button id="btn." class="btns"onclick="insert('.')">.</button>
+          </div>
+            <button id="btn0" class="btns"onclick="insert('0')">0</button>
+            <button id="btnDividir"class="btns"onclick="insert('/')">/</button>
+            <button id="btnSubtrair"class="btns"onclick="insert('-')">-</button>
+            <button id="btnMultiplicar"class="btns"onclick="insert('*')">*</button>
+            <button id="btnSomar"class="btns"onclick="insert('+')">+</button>
+            <button id="btResultado" onclick="calculo()">=</button>
+       </div>
+    </main>
+ <script src="./assets/cauc.js"></script>   
+</body>
+</html>
