@@ -38,9 +38,13 @@ body{
     font-size: 25px;
     margin-left: 5px;
     margin-bottom: 5px;  
+    cursor: pointer;
 }
 .btns:hover ,#btResultado:hover{
     transform: scale(1.1);
+    background-color: black;
+    color: #fff;
+    transition: 0.3s;
 }
 
 #visorCauculadora{
@@ -48,7 +52,7 @@ body{
     height: 50px;
     background-color: rgb(242, 248, 248);
     margin:8px;
-    font-size: 30px;
+    font-size: 28px;
     display: flex;
     flex-flow: row-reverse;
     align-items: center;
