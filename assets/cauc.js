@@ -1,6 +1,6 @@
 function insert(num) {
-  document.getElementById("visorCauculadora").innerHTML += num;
-  limiteVisor(num);
+  let inserir = (document.getElementById("visorCauculadora").innerHTML += num);
+  limiteVisor(inserir.length);
 }
 
 function clean() {
@@ -17,24 +17,16 @@ function back() {
 
 function calculo() {
   let resultado = document.getElementById("visorCauculadora").innerHTML;
-  if (resultado === "") {
-    document.getElementById("visorCauculadora").innerHTML = "calc vazio";
-  } else {
-    resultado = document.getElementById("visorCauculadora").innerHTML =
-      eval(resultado);
-    let res = parseFloat(resultado);
-    if (res === ".") {
-      document.getElementById("visorCauculadora").innerHTML = res.toFixed(1);
-      limiteVisor(res);
-    } else {
-      document.getElementById("visorCauculadora").innerHTML = res;
-      limiteVisor(res);
-    }
-  }
+  resultado = document.getElementById("visorCauculadora").innerHTML =
+    eval(resultado);
+  let res = parseFloat(resultado);
+  let NumTratado = (document.getElementById("visorCauculadora").innerHTML =
+    res.toLocaleString());
+  limiteVisor(NumTratado);
+  return NumTratado;
 }
 function limiteVisor(quantidadeCaracters) {
-  let caracters = document.getElementById("visorCauculadora").innerHTML;
-  if (caracters.length > 14) {
+  if (quantidadeCaracters > 14) {
     document.getElementById("visorCauculadora").innerHTML = "erro";
     setTimeout(clean, 500);
   }
