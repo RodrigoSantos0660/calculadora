@@ -22,7 +22,6 @@ function calculo() {
   let res = parseFloat(resultado);
   let NumTratado = (document.getElementById("visorCauculadora").innerHTML =
     res.toLocaleString());
-  //limiteVisor(NumTratado);
   return NumTratado;
 }
 function limiteVisor(quantidadeCaracters) {
