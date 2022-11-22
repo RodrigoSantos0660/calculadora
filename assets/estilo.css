@@ -41,10 +41,11 @@ body{
     cursor: pointer;
 }
 .btns:hover ,#btResultado:hover{
-    transform: scale(1.1);
-    background-color: black;
+    transform: scale(1.2);
+    background-color: rgb(243, 229, 26);
     color: #fff;
     transition: 0.3s;
+    border-radius: 5px;
 }
 
 #visorCauculadora{
