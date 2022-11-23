@@ -22,7 +22,9 @@ function calculo() {
   let res = parseFloat(resultado);
   let NumTratado = (document.getElementById("visorCauculadora").innerHTML =
     res.toLocaleString());
-  return NumTratado;
+  let numdisplay = (document.getElementById("visorCauculadora").innerHTML =
+    NumTratado.replace(",", "."));
+  return numdisplay;
 }
 function limiteVisor(quantidadeCaracters) {
   if (quantidadeCaracters > 14) {
